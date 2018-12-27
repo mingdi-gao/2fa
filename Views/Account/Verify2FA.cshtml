@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Verify2FA";
+}
+
+<h2>Verify2FA</h2>
+<!--Show 2FA verification from here-->
+
+@if (ViewBag.Message == "fail" || ViewBag.Message == null)
+{
+    <div>
+        fail!!
+    </div>
+}
+else
+{
+    <div>
+        2FA success!!
+    </div>
+}
+

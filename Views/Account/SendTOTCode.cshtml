@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Verify2FA";
+}
+
+<h2>Verify2FA</h2>
+<!--Show 2FA verification from here-->
+
+
+<div>@ViewBag.Message</div>
+<div>
+    <img src="@ViewBag.BarcodeImageUrl" />
+</div>
+<div>
+    Manual Setup Code: @ViewBag.SetupCode
+</div>
+<div>
+    @using (Html.BeginForm("Verify2FA", "Account", FormMethod.Post))
+    {
+        <input type="text" name="passcode" />
+        <input type="submit" class="btn btn-success" />
+
+    }
+</div>
+
